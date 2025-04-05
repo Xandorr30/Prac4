@@ -1,0 +1,99 @@
+﻿
+<head>
+    <link href="../Content/myStyle.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+@{
+    ViewBag.Title = "Person2";
+}
+
+
+
+
+@*Navbar*@
+
+<h2>Person 2 - Jean-Jac Du Toit</h2>
+
+<div class="topnav">
+    <a @Html.ActionLink("Main", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })></a>
+    <a @Html.ActionLink("List", "People", "People", new { area = "" }, new { @class = "nav-link" })></a>
+    <a @Html.ActionLink("Person1", "Person1", "HTML", new { area = "" }, new { @class = "nav-link" })></a>
+    <a class="active" @Html.ActionLink("Person2", "Person2", "HTML", new { area = "" }, new { @class = "nav-link" })></a>
+    <a @Html.ActionLink("Person3", "Person3", "HTML", new { area = "" }, new { @class = "nav-link" })></a>
+    <a @Html.ActionLink("Person4", "Person4", "HTML", new { area = "" }, new { @class = "nav-link" })></a>
+    <a @Html.ActionLink("Person5", "Person5", "HTML", new { area = "" }, new { @class = "nav-link" })></a>
+    <a href="javascript:history.back()" class="nav-link">Back</a>
+</div>
+
+<br />
+
+<main aria-labelledby="title">
+
+    <div class=" panel-group">
+        <div class="panel panel-default">
+            <div class="info clearfix">
+                <div class="panel-heading">
+                    <h2> Bibliography and Background</h2>
+                </div>
+                <div class="panel-body">
+                    <p>
+                        <img src="@Url.Action("DisplayImage", "HTML", new { imageName = "captainAmerica.jpeg" })" alt="Gaming Image" class="float-left" style="height : 200px;width : 200px;" />
+                        Jean-Jac Du Toit was born in Pretoria and went to school Pretoria. He studies BIT(IS) with Informatics as another elective.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+        <br />
+        <div class="panel panel-default">
+            <div class="info clearfix">
+                <div class="panel-heading">
+                    <h2> Hobbies</h2>
+                </div>
+                <div class="panel-body">
+                    <p>
+                        He likes to gym in his spare time.
+
+                        <img src="@Url.Action("DisplayImage", "HTML", new { imageName = "gym.jpg" })" alt="Gaming Image" class="float-right" style="height : 200px;width : 200px;" />
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+        <br />
+        <div class="panel panel-default">
+            <div class="info">
+                <div class="panel-heading">
+                    <h2> Modules</h2>
+                </div>
+                <div class="panel-body">
+                    <table>
+                        <tr>
+                            <th>Modules Semester 1</th>
+                            <th>Modules Semester 2</th>
+                        </tr>
+                        <tr>
+                            <td>INF 271</td>
+                            <td>INL 220</td>
+                        </tr>
+                        <tr>
+                            <td>INF 272</td>
+                            <td>INF 225</td>
+                        </tr>
+                        <tr>
+                            <td>INF 214</td>
+                            <td>INF 261</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</main>

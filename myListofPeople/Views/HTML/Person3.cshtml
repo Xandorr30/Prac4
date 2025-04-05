@@ -1,0 +1,84 @@
+﻿
+
+<head>
+    <link href="../Content/myStyle.css" rel="stylesheet" />
+</head>
+
+@{
+    ViewBag.Title = "Person3";
+}
+
+
+
+
+@*Navbar*@
+
+<h2>Person 3 - Craig Hasenjager</h2>
+
+<div class="topnav">
+    <a @Html.ActionLink("Main", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })></a>
+    <a @Html.ActionLink("List", "People", "People", new { area = "" }, new { @class = "nav-link" })></a>
+    <a @Html.ActionLink("Person1", "Person1", "HTML", new { area = "" }, new { @class = "nav-link" })></a>
+    <a @Html.ActionLink("Person2", "Person2", "HTML", new { area = "" }, new { @class = "nav-link" })></a>
+    <a class="active" @Html.ActionLink("Person3", "Person3", "HTML", new { area = "" }, new { @class = "nav-link" })></a>
+    <a @Html.ActionLink("Person4", "Person4", "HTML", new { area = "" }, new { @class = "nav-link" })></a>
+    <a @Html.ActionLink("Person5", "Person5", "HTML", new { area = "" }, new { @class = "nav-link" })></a>
+    <a href="javascript:history.back()" class="nav-link">Back</a>
+</div>
+
+<br />
+
+<main aria-labelledby="title">
+
+
+    <div class="info clearfix" style=" border-spacing : 20px;">
+        <h2> Bibliography and Background</h2>
+
+        <p>
+            <img src="@Url.Action("DisplayImage", "HTML", new { imageName = "ironman.jpg" })" alt="Gaming Image" class="float-left" style="height : 200px;width : 200px;" />
+            Craig Hasenjager was born in Pretoria and went to school Pretoria. He studies BIT(IS) with Statistics as another elective.
+        </p>
+
+    </div>
+
+    <br />
+
+    <div class="info clearfix">
+        <h2> Hobbies</h2>
+
+
+        <p>
+            He likes to work on coding in his spare time.
+
+            <img src="@Url.Action("DisplayImage", "HTML", new { imageName = "coding.jpg" })" alt="Gaming Image" class="float-right" style="height : 200px;width : 200px;" />
+        </p>
+
+    </div>
+
+    <br />
+
+    <div class="info">
+        <h2> Modules</h2>
+        <table>
+            <tr>
+                <th>Modules Semester 1</th>
+                <th>Modules Semester 2</th>
+            </tr>
+            <tr>
+                <td>INF 271</td>
+                <td>INL 220</td>
+            </tr>
+            <tr>
+                <td>INF 272</td>
+                <td>INF 225</td>
+            </tr>
+            <tr>
+                <td>INF 214</td>
+                <td>INF 261</td>
+            </tr>
+        </table>
+    </div>
+
+
+
+</main>
